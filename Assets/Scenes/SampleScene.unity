@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 113511384}
   - component: {fileID: 113511387}
   - component: {fileID: 113511386}
-  - component: {fileID: 113511385}
   m_Layer: 0
   m_Name: Front wing
   m_TagString: Untagged
@@ -153,27 +152,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 346309321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &113511385
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113511383}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &113511386
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -377,6 +355,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 346309321}
+  - component: {fileID: 346309323}
+  - component: {fileID: 346309322}
   m_Layer: 0
   m_Name: Airplane Root
   m_TagString: Untagged
@@ -403,6 +383,56 @@ Transform:
   - {fileID: 1328611883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &346309322
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346309320}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.45
+  m_Height: 4.26
+  m_Direction: 2
+  m_Center: {x: -1.52, y: 0.23, z: -0.18}
+--- !u!54 &346309323
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346309320}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +571,6 @@ GameObject:
   - component: {fileID: 579248050}
   - component: {fileID: 579248053}
   - component: {fileID: 579248052}
-  - component: {fileID: 579248051}
   m_Layer: 0
   m_Name: Back wing
   m_TagString: Untagged
@@ -564,27 +593,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 346309321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &579248051
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579248049}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &579248052
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -653,7 +661,6 @@ GameObject:
   - component: {fileID: 809544646}
   - component: {fileID: 809544649}
   - component: {fileID: 809544648}
-  - component: {fileID: 809544647}
   m_Layer: 0
   m_Name: Airplane body
   m_TagString: Untagged
@@ -676,27 +683,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 346309321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &809544647
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809544645}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &809544648
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -814,7 +800,6 @@ GameObject:
   - component: {fileID: 1328611883}
   - component: {fileID: 1328611886}
   - component: {fileID: 1328611885}
-  - component: {fileID: 1328611884}
   m_Layer: 0
   m_Name: Back wing_2
   m_TagString: Untagged
@@ -837,27 +822,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 346309321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!65 &1328611884
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328611882}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1328611885
 MeshRenderer:
   m_ObjectHideFlags: 0
